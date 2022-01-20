@@ -1,9 +1,5 @@
 import XCTest
 
-// Note: tests are passing fine locally. If they
-// become flakey, consider calling wait(for: animationDelay)
-// on cell selection/deselection and section expand/collapse.
-
 final class GroceriesUITests: XCTestCase {
     
     // seconds
@@ -13,7 +9,6 @@ final class GroceriesUITests: XCTestCase {
     
     override func setUp() {
         app.launchArguments.append("--ui-testing")
-        sleep(5)
     }
 
     // these are the only elements that are examined
@@ -87,9 +82,6 @@ final class GroceriesUITests: XCTestCase {
         // when
         header.tap()
         
-        // and - animation completes
-//        wait(for: animationDelay)
-        
         // then
         XCTAssertFalse(cabbageCell.exists)
         
@@ -112,15 +104,9 @@ final class GroceriesUITests: XCTestCase {
         // when - cabbage is selected
         cabbageCell.tap()
         header.tap()
-        
-        // and - animations complete
-        wait(for: animationDelay)
-        
+
         // when - section expands
         header.tap()
-        
-        // and - animation completes
-        wait(for: animationDelay)
         
         // then - cell is still selected
         XCTAssertTrue(cabbageCell.isSelected)
@@ -139,9 +125,6 @@ final class GroceriesUITests: XCTestCase {
         cabbageCell.tap()
         header.tap()
 
-        // and - animation completes
-//        wait(for: animationDelay)
-        
         // when
         lambCell.tap()
         header.tap()
@@ -179,11 +162,6 @@ final class GroceriesUITests: XCTestCase {
         
         // then
         XCTAssertFalse(bananaCell.isSelected)
-    }
-    
-    private func wait(for delay: Double) {
-        let second: Double = 1000000
-        usleep(useconds_t(delay * second))
     }
     
     private func cell(_ cell: Cell) -> XCUIElement {
