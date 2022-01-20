@@ -1,7 +1,7 @@
 # AccordionTable
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Build Status](https://app.bitrise.io/app/56aab2adf6b1bc79/status.svg?token=1mBREr1_-AwQJkJhfN-5Fw)](https://app.bitrise.io/app/c7faa96c9fe4ad70)
+[![Build Status](https://app.bitrise.io/app/c7faa96c9fe4ad70/status.svg?token=BLygyTI2Y3Y8tNJJwJUpJw&branch=master)](https://app.bitrise.io/app/c7faa96c9fe4ad70)
 
 A wrapper for a diffable data source which facilitates collapsible table view sections. You may want to disable floating headers (see [demo](https://github.com/nashysolutions/MeltingList) app).
 
