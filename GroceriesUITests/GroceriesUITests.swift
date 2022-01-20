@@ -108,15 +108,18 @@ final class GroceriesUITests: XCTestCase {
         let cabbageCell = cell(.cabbage)
         let header = header(.vegetables)
         
-        // when
+        // when - cabbage is selected
         cabbageCell.tap()
         header.tap()
         
-        // and - animation completes
-//        wait(for: animationDelay)
+        // and - animations complete
+        wait(for: animationDelay)
         
         // when - section expands
         header.tap()
+        
+        // and - animation completes
+        wait(for: animationDelay)
         
         // then - cell is still selected
         XCTAssertTrue(cabbageCell.isSelected)
@@ -177,10 +180,10 @@ final class GroceriesUITests: XCTestCase {
         XCTAssertFalse(bananaCell.isSelected)
     }
     
-//    private func wait(for delay: Double) {
-//        let second: Double = 1000000
-//        usleep(useconds_t(delay * second))
-//    }
+    private func wait(for delay: Double) {
+        let second: Double = 1000000
+        usleep(useconds_t(delay * second))
+    }
     
     private func cell(_ cell: Cell) -> XCUIElement {
         app.tables.cells[cell.rawValue]
