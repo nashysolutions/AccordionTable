@@ -1,5 +1,4 @@
 import Foundation
-import OrderedCollections
 
 final class TableRowStateManager<Row: Hashable> {
 

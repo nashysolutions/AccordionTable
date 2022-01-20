@@ -1,5 +1,5 @@
 import Foundation
-import OrderedCollections
+import AccordionTable
 
 // Identifiers not needed here as we are in complete control of the data, which is deliberately unique.
 struct Food: Hashable {

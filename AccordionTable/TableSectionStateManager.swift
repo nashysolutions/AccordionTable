@@ -1,5 +1,4 @@
 import Foundation
-import OrderedCollections
 
 final class TableSectionStateManager<Section: Hashable> {
     

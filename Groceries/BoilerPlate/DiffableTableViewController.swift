@@ -1,5 +1,4 @@
 import UIKit
-import OrderedCollections
 import AccordionTable
 
 class DiffableTableViewController<TableView: UITableView, Section: Hashable, Row: Hashable>: UIViewController {

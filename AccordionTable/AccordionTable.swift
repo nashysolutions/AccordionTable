@@ -1,5 +1,4 @@
 import UIKit
-import OrderedCollections
 
 public enum SectionVisibility {
     case collapsed
