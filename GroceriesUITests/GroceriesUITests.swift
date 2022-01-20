@@ -82,6 +82,9 @@ final class GroceriesUITests: XCTestCase {
         // when
         header.tap()
         
+        // and - animation completes
+        wait(for: animationDelay)
+        
         // then
         XCTAssertFalse(cabbageCell.exists)
         
@@ -162,6 +165,11 @@ final class GroceriesUITests: XCTestCase {
         
         // then
         XCTAssertFalse(bananaCell.isSelected)
+    }
+    
+    private func wait(for delay: Double) {
+        let second: Double = 1000000
+        usleep(useconds_t(delay * second))
     }
     
     private func cell(_ cell: Cell) -> XCUIElement {
