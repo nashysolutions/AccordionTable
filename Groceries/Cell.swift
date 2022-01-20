@@ -11,6 +11,12 @@ final class Cell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override var isSelected: Bool {
+        didSet {
+            accessibilityTraits = isSelected ? .selected : .none
+        }
+    }
+    
     func update(with food: Item) {
         let title = food.title
         textLabel?.text = title
