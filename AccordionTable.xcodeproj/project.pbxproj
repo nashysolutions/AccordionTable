@@ -90,6 +90,7 @@
 		50416FEE278D833D00C53DD2 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		506EE82E2793FA3600D7F9CB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		509298052789C41800FE779E /* DiffableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableTableViewController.swift; sourceTree = "<group>"; };
+		50A20B4F279918FF00E5E285 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +123,7 @@
 		500393C72782B270009B126F = {
 			isa = PBXGroup;
 			children = (
+				50A20B4F279918FF00E5E285 /* README.md */,
 				5023BCF627946F20002AD5E0 /* AccordionTable */,
 				50416FB1278D729E00C53DD2 /* Groceries */,
 				50416FCE278D732F00C53DD2 /* GroceriesUITests */,
