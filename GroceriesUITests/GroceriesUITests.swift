@@ -13,6 +13,7 @@ final class GroceriesUITests: XCTestCase {
     
     override func setUp() {
         app.launchArguments.append("--ui-testing")
+        sleep(5)
     }
 
     // these are the only elements that are examined
