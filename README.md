@@ -2,7 +2,7 @@
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-A wrapper for a diffable data source which facilitates collapsible table view sections. You may want to disable floating headers (see demo app).
+A wrapper for a diffable data source which facilitates collapsible table view sections. You may want to disable floating headers (see [demo](https://github.com/nashysolutions/MeltingList) app).
 
 <img src="https://user-images.githubusercontent.com/64097812/150280515-64bbcc1b-ba85-4c56-bd4a-0b77be008e8c.gif" width="300"/>
 
