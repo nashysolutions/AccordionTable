@@ -2,38 +2,40 @@
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-A wrapper for a diffable dataSource which facilitates collapsible table view sections.
+A wrapper for a diffable data source which facilitates collapsible table view sections. You may want to disable floating headers (see demo app).
+
+<img src="https://user-images.githubusercontent.com/64097812/150280515-64bbcc1b-ba85-4c56-bd4a-0b77be008e8c.gif" width="300"/>
 
 ## Implementation
 
-The following steps are for a typical table view implementation. You may want to do some additional customisation, such as: -
- 
-1. subclass `UITableViewDiffableDataSource`
-2. provide several header view types in your `headerProvider`
-3. disable floating table view headers (see demo app)
+The following steps are for a typical table view implementation.
 
-### Setup
-
-If your user interface is reloading more rows/sections than it should, it is likely the hashable implementation to blame. It seems each row must be unique within the entire dataset (not just within the section it belongs). Use GUID's on your dataset to achieve this. Alternatively, at the row level, make a reference to the section in which that row belongs (be careful of retain cycle) and use that in the hashable implementation of the row.
+### Prepare a model
 
 <details>
     <summary>Example</summary>
-    
-    Consider avoiding any user interface state management in your model structures (and hashable implementation), such as `isHighlighted`, as this will be destroyed per snapshot (use a backing store instead, such as a `Set` or `key/value` collection).
 
     ```swift
     struct Food: Hashable {
+        let id: UUID
         let title: String
         let items: [Item] // rows
     }
 
     struct Item: Hashable {
+        let id: UUID
         let title: String
     }
     ```
 </details>
 
-Prepare an instance of `AccordionTable`.
+Consider avoiding any user interface state management in your model structures (and hashable implementation), such as `isHighlighted`, as this will be destroyed per snapshot (use a backing store instead, such as a `Set` or `key/value` collection).
+
+If your user interface is reloading more rows/sections than it should, it is likely the hashable implementation to blame. It seems each row must be unique within the entire dataset (not just within the section it belongs). Use GUID's on your dataset to achieve this. Alternatively, at the row level, make a reference to the section in which that row belongs (be careful of retain cycle when using classes) and use that in the hashable implementation of the row.
+
+> If you need to use `reloadItems(_ identifiers: [ItemIdentifierType])` then you will need to use class's for your model.  
+
+### Prepare an instance of `AccordionTable`.
 
 <details>
     <summary>Show me</summary>
@@ -51,13 +53,13 @@ Prepare an instance of `AccordionTable`.
     ```
 </details>
 
-Prepare a table view delegate which consumes an instance of `AccordionTable`.
+### Prepare a table view delegate.
 
 <details>
     <summary>Show me</summary>
     
     ```swift
-    class TypicalTableViewDelegate<Food, Item>: NSObject, UITableViewDelegate {
+    class TypicalTableViewDelegate: NSObject, UITableViewDelegate {
     
         let tableManager: AccordionTable<Food, Item>
         
@@ -93,22 +95,34 @@ Prepare a table view delegate which consumes an instance of `AccordionTable`.
     ```
 </details>
 
-You will need to map your data to an [Ordered Dictionary](https://github.com/apple/swift-collections/tree/main/Sources/OrderedCollections/OrderedDictionary), the API for which is included as a dependency.
+### Map your data
+
+The API for [Ordered Dictionary](https://github.com/apple/swift-collections/tree/main/Sources/OrderedCollections/OrderedDictionary) is included as a dependency.
 
 ```swift
 let data = OrderedDictionary<Food, [Item]>()
 ```
 
-### Usage
+## Usage 
 
-If you need to use `reloadItems(_ identifiers: [ItemIdentifierType])` then you will need to use class's for your model. 
+To reload the data, call the following on your instance of `AccordionTable`.
 
-If you need to programmatically select or deselect a row, make sure to update your model before updating your view.
+```swift
+func update(with data: OrderedDictionary<Food, [Item]>, animated: true)
+```
+
+> On initial load, pass `animated: false`.
+
+To programmatically select a row.
 
 ```swift
 diffableTableManager.saveSelectedStateForRow(at: indexPath)
 tableView.selectRow(at: indexPath, animated: animated, scrollPosition: scrollPosition)
+``` 
 
+To programmatically deselect a row.
+
+```swift
 diffableTableManager.saveDeselectedStateForRow(at: indexPath)
 tableView.deselectRow(at: indexPath, animated: animated)
-``` 
+```
