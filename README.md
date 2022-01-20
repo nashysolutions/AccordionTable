@@ -30,12 +30,6 @@ The following steps are for a typical table view implementation.
     ```
 </details>
 
-Consider avoiding any user interface state management in your model structures (and hashable implementation), such as `isHighlighted`, as this will be destroyed per snapshot (use a backing store instead, such as a `Set` or `key/value` collection).
-
-If your user interface is reloading more rows/sections than it should, it is likely the hashable implementation to blame. It seems each row must be unique within the entire dataset (not just within the section it belongs). Use GUID's on your dataset to achieve this. Alternatively, at the row level, make a reference to the section in which that row belongs (be careful of retain cycle when using classes) and use that in the hashable implementation of the row.
-
-> If you need to use `reloadItems(_ identifiers: [ItemIdentifierType])` then you will need to use class's for your model.  
-
 ### Prepare an instance of `AccordionTable`.
 
 <details>
@@ -98,11 +92,19 @@ If your user interface is reloading more rows/sections than it should, it is lik
 
 ### Map your data
 
-The API for [Ordered Dictionary](https://github.com/apple/swift-collections/tree/main/Sources/OrderedCollections/OrderedDictionary) is included as a dependency.
+The source for [Ordered Dictionary](https://github.com/apple/swift-collections/tree/main/Sources/OrderedCollections/OrderedDictionary) has been embedded within the project. See [Note](https://github.com/nashysolutions/AccordionTable/blob/main/AccordionTable/ThirdParty/Note.md) for reasoning.
 
 ```swift
 let data = OrderedDictionary<Food, [Item]>()
 ```
+    
+## Side Note
+    
+Consider avoiding any user interface state management in your model structures (and hashable implementation), such as `isHighlighted`, as this will be destroyed per snapshot (use a backing store instead, such as a `Set` or `key/value` collection).
+
+If your user interface is reloading more rows/sections than it should, it is likely the hashable implementation to blame. It seems each row must be unique within the entire dataset (not just within the section it belongs). Use GUID's on your dataset to achieve this. Alternatively, at the row level, make a reference to the section in which that row belongs (be careful of retain cycle when using classes) and use that in the hashable implementation of the row.
+
+> If you need to use `reloadItems(_ identifiers: [ItemIdentifierType])` then you will need to use class's for your model.  
 
 ## Usage 
 
