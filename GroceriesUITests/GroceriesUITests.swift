@@ -40,6 +40,8 @@ final class GroceriesUITests: XCTestCase {
         // when
         cabbageCell.tap()
         
+        wait(for: animationDelay)
+        
         // then
         XCTAssertTrue(cabbageCell.isSelected)
         
