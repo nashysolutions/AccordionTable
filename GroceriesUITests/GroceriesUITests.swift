@@ -154,15 +154,14 @@ final class GroceriesUITests: XCTestCase {
 
     func testDeselectionOfProgrammaticallySelectedRow() {
         
+        // given
         app.launchArguments.append("--programmatically-select-banana")
         app.launch()
-        
-        // given
         let bananaCell = cell(.banana)
         
         // when
         bananaCell.tap()
-        
+
         // then
         XCTAssertFalse(bananaCell.isSelected)
     }
