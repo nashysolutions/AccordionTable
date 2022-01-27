@@ -13,7 +13,7 @@ public final class AccordionTable<Section: Hashable, Row: Hashable> {
     public typealias DiffableDataSource = UITableViewDiffableDataSource<Section, Row>
     public typealias HeaderProvider = (UITableView, Int, Section) -> HeaderView
 
-    private let dataSource: DiffableDataSource
+    public let dataSource: DiffableDataSource
     private let headerProvider: HeaderProvider
     private let animationDuration: CGFloat = 0.2
     
