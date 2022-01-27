@@ -30,56 +30,6 @@
 		50416FED278D7DBE00C53DD2 /* ArrowHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50416FE7278D7B9B00C53DD2 /* ArrowHeaderView.xib */; };
 		50416FEF278D833D00C53DD2 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50416FEE278D833D00C53DD2 /* Cell.swift */; };
 		506EE82F2793FA3600D7F9CB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506EE82E2793FA3600D7F9CB /* Model.swift */; };
-		50A20BEC279942B600E5E285 /* OrderedDictionary+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BB6279942B600E5E285 /* OrderedDictionary+Equatable.swift */; };
-		50A20BED279942B600E5E285 /* OrderedDictionary+ExpressibleByDictionaryLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BB7279942B600E5E285 /* OrderedDictionary+ExpressibleByDictionaryLiteral.swift */; };
-		50A20BEE279942B600E5E285 /* OrderedDictionary+Elements+SubSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BB8279942B600E5E285 /* OrderedDictionary+Elements+SubSequence.swift */; };
-		50A20BEF279942B600E5E285 /* OrderedDictionary+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BB9279942B600E5E285 /* OrderedDictionary+Hashable.swift */; };
-		50A20BF0279942B600E5E285 /* OrderedDictionary+Deprecations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BBA279942B600E5E285 /* OrderedDictionary+Deprecations.swift */; };
-		50A20BF1279942B600E5E285 /* OrderedDictionary+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BBB279942B600E5E285 /* OrderedDictionary+Initializers.swift */; };
-		50A20BF2279942B600E5E285 /* OrderedDictionary+CustomReflectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BBC279942B600E5E285 /* OrderedDictionary+CustomReflectable.swift */; };
-		50A20BF3279942B600E5E285 /* OrderedDictionary+Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BBD279942B600E5E285 /* OrderedDictionary+Sequence.swift */; };
-		50A20BF4279942B600E5E285 /* OrderedDictionary+Partial RangeReplaceableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BBE279942B600E5E285 /* OrderedDictionary+Partial RangeReplaceableCollection.swift */; };
-		50A20BF5279942B600E5E285 /* OrderedDictionary+Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BBF279942B600E5E285 /* OrderedDictionary+Elements.swift */; };
-		50A20BF6279942B600E5E285 /* OrderedDictionary+CustomDebugStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BC0279942B600E5E285 /* OrderedDictionary+CustomDebugStringConvertible.swift */; };
-		50A20BF7279942B600E5E285 /* OrderedDictionary+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BC1279942B600E5E285 /* OrderedDictionary+Codable.swift */; };
-		50A20BF8279942B600E5E285 /* OrderedDictionary+Invariants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BC2279942B600E5E285 /* OrderedDictionary+Invariants.swift */; };
-		50A20BF9279942B600E5E285 /* OrderedDictionary+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BC3279942B600E5E285 /* OrderedDictionary+CustomStringConvertible.swift */; };
-		50A20BFA279942B600E5E285 /* OrderedDictionary+Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BC4279942B600E5E285 /* OrderedDictionary+Values.swift */; };
-		50A20BFB279942B600E5E285 /* OrderedDictionary+Partial MutableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BC5279942B600E5E285 /* OrderedDictionary+Partial MutableCollection.swift */; };
-		50A20BFC279942B600E5E285 /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BC6279942B600E5E285 /* OrderedDictionary.swift */; };
-		50A20BFD279942B600E5E285 /* OrderedSet+RandomAccessCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BC8279942B600E5E285 /* OrderedSet+RandomAccessCollection.swift */; };
-		50A20BFE279942B600E5E285 /* OrderedSet+Diffing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BC9279942B600E5E285 /* OrderedSet+Diffing.swift */; };
-		50A20BFF279942B600E5E285 /* OrderedSet+UnstableInternals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BCA279942B600E5E285 /* OrderedSet+UnstableInternals.swift */; };
-		50A20C00279942B600E5E285 /* OrderedSet+Invariants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BCB279942B600E5E285 /* OrderedSet+Invariants.swift */; };
-		50A20C01279942B600E5E285 /* OrderedSet+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BCC279942B600E5E285 /* OrderedSet+Hashable.swift */; };
-		50A20C02279942B600E5E285 /* OrderedSet+CustomDebugStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BCD279942B600E5E285 /* OrderedSet+CustomDebugStringConvertible.swift */; };
-		50A20C03279942B600E5E285 /* OrderedSet+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BCE279942B600E5E285 /* OrderedSet+CustomStringConvertible.swift */; };
-		50A20C04279942B600E5E285 /* OrderedSet+Insertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BCF279942B600E5E285 /* OrderedSet+Insertions.swift */; };
-		50A20C05279942B600E5E285 /* OrderedSet+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BD0279942B600E5E285 /* OrderedSet+Codable.swift */; };
-		50A20C06279942B600E5E285 /* OrderedSet+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BD1279942B600E5E285 /* OrderedSet+Equatable.swift */; };
-		50A20C07279942B600E5E285 /* OrderedSet+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BD2279942B600E5E285 /* OrderedSet+Initializers.swift */; };
-		50A20C08279942B600E5E285 /* OrderedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BD3279942B600E5E285 /* OrderedSet.swift */; };
-		50A20C09279942B600E5E285 /* OrderedSet+UnorderedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BD4279942B600E5E285 /* OrderedSet+UnorderedView.swift */; };
-		50A20C0A279942B600E5E285 /* OrderedSet+ExpressibleByArrayLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BD5279942B600E5E285 /* OrderedSet+ExpressibleByArrayLiteral.swift */; };
-		50A20C0B279942B600E5E285 /* OrderedSet+SubSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BD6279942B600E5E285 /* OrderedSet+SubSequence.swift */; };
-		50A20C0C279942B600E5E285 /* OrderedSet+Partial MutableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BD7279942B600E5E285 /* OrderedSet+Partial MutableCollection.swift */; };
-		50A20C0D279942B600E5E285 /* OrderedSet+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BD8279942B600E5E285 /* OrderedSet+Testing.swift */; };
-		50A20C0E279942B600E5E285 /* OrderedSet+CustomReflectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BD9279942B600E5E285 /* OrderedSet+CustomReflectable.swift */; };
-		50A20C0F279942B600E5E285 /* OrderedSet+ReserveCapacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BDA279942B600E5E285 /* OrderedSet+ReserveCapacity.swift */; };
-		50A20C10279942B600E5E285 /* OrderedSet+Partial RangeReplaceableCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BDB279942B600E5E285 /* OrderedSet+Partial RangeReplaceableCollection.swift */; };
-		50A20C11279942B600E5E285 /* OrderedSet+Partial SetAlgebra+Basics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BDC279942B600E5E285 /* OrderedSet+Partial SetAlgebra+Basics.swift */; };
-		50A20C12279942B600E5E285 /* OrderedSet+Partial SetAlgebra+Predicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BDD279942B600E5E285 /* OrderedSet+Partial SetAlgebra+Predicates.swift */; };
-		50A20C13279942B600E5E285 /* OrderedSet+Partial SetAlgebra+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BDE279942B600E5E285 /* OrderedSet+Partial SetAlgebra+Operations.swift */; };
-		50A20C14279942B600E5E285 /* _UnsafeBitset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BE0279942B600E5E285 /* _UnsafeBitset.swift */; };
-		50A20C15279942B600E5E285 /* RandomAccessCollection+Offsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BE1279942B600E5E285 /* RandomAccessCollection+Offsets.swift */; };
-		50A20C16279942B600E5E285 /* _HashTable+UnsafeHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BE3279942B600E5E285 /* _HashTable+UnsafeHandle.swift */; };
-		50A20C17279942B600E5E285 /* _HashTable+Bucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BE4279942B600E5E285 /* _HashTable+Bucket.swift */; };
-		50A20C18279942B600E5E285 /* _HashTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BE5279942B600E5E285 /* _HashTable.swift */; };
-		50A20C19279942B600E5E285 /* _HashTable+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BE6279942B600E5E285 /* _HashTable+Constants.swift */; };
-		50A20C1A279942B600E5E285 /* _Hashtable+Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BE7279942B600E5E285 /* _Hashtable+Header.swift */; };
-		50A20C1B279942B600E5E285 /* _HashTable+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BE8279942B600E5E285 /* _HashTable+Testing.swift */; };
-		50A20C1C279942B600E5E285 /* _HashTable+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BE9279942B600E5E285 /* _HashTable+CustomStringConvertible.swift */; };
-		50A20C1D279942B600E5E285 /* _HashTable+BucketIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A20BEA279942B600E5E285 /* _HashTable+BucketIterator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,57 +90,6 @@
 		506EE82E2793FA3600D7F9CB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		509298052789C41800FE779E /* DiffableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableTableViewController.swift; sourceTree = "<group>"; };
 		50A20B4F279918FF00E5E285 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		50A20BB6279942B600E5E285 /* OrderedDictionary+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedDictionary+Equatable.swift"; sourceTree = "<group>"; };
-		50A20BB7279942B600E5E285 /* OrderedDictionary+ExpressibleByDictionaryLiteral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedDictionary+ExpressibleByDictionaryLiteral.swift"; sourceTree = "<group>"; };
-		50A20BB8279942B600E5E285 /* OrderedDictionary+Elements+SubSequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedDictionary+Elements+SubSequence.swift"; sourceTree = "<group>"; };
-		50A20BB9279942B600E5E285 /* OrderedDictionary+Hashable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedDictionary+Hashable.swift"; sourceTree = "<group>"; };
-		50A20BBA279942B600E5E285 /* OrderedDictionary+Deprecations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedDictionary+Deprecations.swift"; sourceTree = "<group>"; };
-		50A20BBB279942B600E5E285 /* OrderedDictionary+Initializers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedDictionary+Initializers.swift"; sourceTree = "<group>"; };
-		50A20BBC279942B600E5E285 /* OrderedDictionary+CustomReflectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedDictionary+CustomReflectable.swift"; sourceTree = "<group>"; };
-		50A20BBD279942B600E5E285 /* OrderedDictionary+Sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedDictionary+Sequence.swift"; sourceTree = "<group>"; };
-		50A20BBE279942B600E5E285 /* OrderedDictionary+Partial RangeReplaceableCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedDictionary+Partial RangeReplaceableCollection.swift"; sourceTree = "<group>"; };
-		50A20BBF279942B600E5E285 /* OrderedDictionary+Elements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedDictionary+Elements.swift"; sourceTree = "<group>"; };
-		50A20BC0279942B600E5E285 /* OrderedDictionary+CustomDebugStringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedDictionary+CustomDebugStringConvertible.swift"; sourceTree = "<group>"; };
-		50A20BC1279942B600E5E285 /* OrderedDictionary+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedDictionary+Codable.swift"; sourceTree = "<group>"; };
-		50A20BC2279942B600E5E285 /* OrderedDictionary+Invariants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedDictionary+Invariants.swift"; sourceTree = "<group>"; };
-		50A20BC3279942B600E5E285 /* OrderedDictionary+CustomStringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedDictionary+CustomStringConvertible.swift"; sourceTree = "<group>"; };
-		50A20BC4279942B600E5E285 /* OrderedDictionary+Values.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedDictionary+Values.swift"; sourceTree = "<group>"; };
-		50A20BC5279942B600E5E285 /* OrderedDictionary+Partial MutableCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedDictionary+Partial MutableCollection.swift"; sourceTree = "<group>"; };
-		50A20BC6279942B600E5E285 /* OrderedDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedDictionary.swift; sourceTree = "<group>"; };
-		50A20BC8279942B600E5E285 /* OrderedSet+RandomAccessCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+RandomAccessCollection.swift"; sourceTree = "<group>"; };
-		50A20BC9279942B600E5E285 /* OrderedSet+Diffing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+Diffing.swift"; sourceTree = "<group>"; };
-		50A20BCA279942B600E5E285 /* OrderedSet+UnstableInternals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+UnstableInternals.swift"; sourceTree = "<group>"; };
-		50A20BCB279942B600E5E285 /* OrderedSet+Invariants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+Invariants.swift"; sourceTree = "<group>"; };
-		50A20BCC279942B600E5E285 /* OrderedSet+Hashable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+Hashable.swift"; sourceTree = "<group>"; };
-		50A20BCD279942B600E5E285 /* OrderedSet+CustomDebugStringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+CustomDebugStringConvertible.swift"; sourceTree = "<group>"; };
-		50A20BCE279942B600E5E285 /* OrderedSet+CustomStringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+CustomStringConvertible.swift"; sourceTree = "<group>"; };
-		50A20BCF279942B600E5E285 /* OrderedSet+Insertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+Insertions.swift"; sourceTree = "<group>"; };
-		50A20BD0279942B600E5E285 /* OrderedSet+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+Codable.swift"; sourceTree = "<group>"; };
-		50A20BD1279942B600E5E285 /* OrderedSet+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+Equatable.swift"; sourceTree = "<group>"; };
-		50A20BD2279942B600E5E285 /* OrderedSet+Initializers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+Initializers.swift"; sourceTree = "<group>"; };
-		50A20BD3279942B600E5E285 /* OrderedSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedSet.swift; sourceTree = "<group>"; };
-		50A20BD4279942B600E5E285 /* OrderedSet+UnorderedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+UnorderedView.swift"; sourceTree = "<group>"; };
-		50A20BD5279942B600E5E285 /* OrderedSet+ExpressibleByArrayLiteral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+ExpressibleByArrayLiteral.swift"; sourceTree = "<group>"; };
-		50A20BD6279942B600E5E285 /* OrderedSet+SubSequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+SubSequence.swift"; sourceTree = "<group>"; };
-		50A20BD7279942B600E5E285 /* OrderedSet+Partial MutableCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+Partial MutableCollection.swift"; sourceTree = "<group>"; };
-		50A20BD8279942B600E5E285 /* OrderedSet+Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+Testing.swift"; sourceTree = "<group>"; };
-		50A20BD9279942B600E5E285 /* OrderedSet+CustomReflectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+CustomReflectable.swift"; sourceTree = "<group>"; };
-		50A20BDA279942B600E5E285 /* OrderedSet+ReserveCapacity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+ReserveCapacity.swift"; sourceTree = "<group>"; };
-		50A20BDB279942B600E5E285 /* OrderedSet+Partial RangeReplaceableCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+Partial RangeReplaceableCollection.swift"; sourceTree = "<group>"; };
-		50A20BDC279942B600E5E285 /* OrderedSet+Partial SetAlgebra+Basics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+Partial SetAlgebra+Basics.swift"; sourceTree = "<group>"; };
-		50A20BDD279942B600E5E285 /* OrderedSet+Partial SetAlgebra+Predicates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+Partial SetAlgebra+Predicates.swift"; sourceTree = "<group>"; };
-		50A20BDE279942B600E5E285 /* OrderedSet+Partial SetAlgebra+Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OrderedSet+Partial SetAlgebra+Operations.swift"; sourceTree = "<group>"; };
-		50A20BE0279942B600E5E285 /* _UnsafeBitset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _UnsafeBitset.swift; sourceTree = "<group>"; };
-		50A20BE1279942B600E5E285 /* RandomAccessCollection+Offsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RandomAccessCollection+Offsets.swift"; sourceTree = "<group>"; };
-		50A20BE3279942B600E5E285 /* _HashTable+UnsafeHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "_HashTable+UnsafeHandle.swift"; sourceTree = "<group>"; };
-		50A20BE4279942B600E5E285 /* _HashTable+Bucket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "_HashTable+Bucket.swift"; sourceTree = "<group>"; };
-		50A20BE5279942B600E5E285 /* _HashTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _HashTable.swift; sourceTree = "<group>"; };
-		50A20BE6279942B600E5E285 /* _HashTable+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "_HashTable+Constants.swift"; sourceTree = "<group>"; };
-		50A20BE7279942B600E5E285 /* _Hashtable+Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "_Hashtable+Header.swift"; sourceTree = "<group>"; };
-		50A20BE8279942B600E5E285 /* _HashTable+Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "_HashTable+Testing.swift"; sourceTree = "<group>"; };
-		50A20BE9279942B600E5E285 /* _HashTable+CustomStringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "_HashTable+CustomStringConvertible.swift"; sourceTree = "<group>"; };
-		50A20BEA279942B600E5E285 /* _HashTable+BucketIterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "_HashTable+BucketIterator.swift"; sourceTree = "<group>"; };
-		50A20C1F2799437300E5E285 /* Note.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Note.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,7 +156,6 @@
 				5023BD0327946F64002AD5E0 /* TableStateManager.swift */,
 				5023BD0227946F64002AD5E0 /* TableRowStateManager.swift */,
 				5023BD0527946F64002AD5E0 /* TableSectionStateManager.swift */,
-				50A20C1E2799436200E5E285 /* ThirdParty */,
 			);
 			path = AccordionTable;
 			sourceTree = "<group>";
@@ -306,104 +204,6 @@
 				50416FE7278D7B9B00C53DD2 /* ArrowHeaderView.xib */,
 			);
 			path = ArrowHeaderView;
-			sourceTree = "<group>";
-		};
-		50A20BB3279942B600E5E285 /* OrderedCollections */ = {
-			isa = PBXGroup;
-			children = (
-				50A20BB5279942B600E5E285 /* OrderedDictionary */,
-				50A20BC7279942B600E5E285 /* OrderedSet */,
-				50A20BDF279942B600E5E285 /* Utilities */,
-				50A20BE2279942B600E5E285 /* HashTable */,
-			);
-			path = OrderedCollections;
-			sourceTree = "<group>";
-		};
-		50A20BB5279942B600E5E285 /* OrderedDictionary */ = {
-			isa = PBXGroup;
-			children = (
-				50A20BB6279942B600E5E285 /* OrderedDictionary+Equatable.swift */,
-				50A20BB7279942B600E5E285 /* OrderedDictionary+ExpressibleByDictionaryLiteral.swift */,
-				50A20BB8279942B600E5E285 /* OrderedDictionary+Elements+SubSequence.swift */,
-				50A20BB9279942B600E5E285 /* OrderedDictionary+Hashable.swift */,
-				50A20BBA279942B600E5E285 /* OrderedDictionary+Deprecations.swift */,
-				50A20BBB279942B600E5E285 /* OrderedDictionary+Initializers.swift */,
-				50A20BBC279942B600E5E285 /* OrderedDictionary+CustomReflectable.swift */,
-				50A20BBD279942B600E5E285 /* OrderedDictionary+Sequence.swift */,
-				50A20BBE279942B600E5E285 /* OrderedDictionary+Partial RangeReplaceableCollection.swift */,
-				50A20BBF279942B600E5E285 /* OrderedDictionary+Elements.swift */,
-				50A20BC0279942B600E5E285 /* OrderedDictionary+CustomDebugStringConvertible.swift */,
-				50A20BC1279942B600E5E285 /* OrderedDictionary+Codable.swift */,
-				50A20BC2279942B600E5E285 /* OrderedDictionary+Invariants.swift */,
-				50A20BC3279942B600E5E285 /* OrderedDictionary+CustomStringConvertible.swift */,
-				50A20BC4279942B600E5E285 /* OrderedDictionary+Values.swift */,
-				50A20BC5279942B600E5E285 /* OrderedDictionary+Partial MutableCollection.swift */,
-				50A20BC6279942B600E5E285 /* OrderedDictionary.swift */,
-			);
-			path = OrderedDictionary;
-			sourceTree = "<group>";
-		};
-		50A20BC7279942B600E5E285 /* OrderedSet */ = {
-			isa = PBXGroup;
-			children = (
-				50A20BC8279942B600E5E285 /* OrderedSet+RandomAccessCollection.swift */,
-				50A20BC9279942B600E5E285 /* OrderedSet+Diffing.swift */,
-				50A20BCA279942B600E5E285 /* OrderedSet+UnstableInternals.swift */,
-				50A20BCB279942B600E5E285 /* OrderedSet+Invariants.swift */,
-				50A20BCC279942B600E5E285 /* OrderedSet+Hashable.swift */,
-				50A20BCD279942B600E5E285 /* OrderedSet+CustomDebugStringConvertible.swift */,
-				50A20BCE279942B600E5E285 /* OrderedSet+CustomStringConvertible.swift */,
-				50A20BCF279942B600E5E285 /* OrderedSet+Insertions.swift */,
-				50A20BD0279942B600E5E285 /* OrderedSet+Codable.swift */,
-				50A20BD1279942B600E5E285 /* OrderedSet+Equatable.swift */,
-				50A20BD2279942B600E5E285 /* OrderedSet+Initializers.swift */,
-				50A20BD3279942B600E5E285 /* OrderedSet.swift */,
-				50A20BD4279942B600E5E285 /* OrderedSet+UnorderedView.swift */,
-				50A20BD5279942B600E5E285 /* OrderedSet+ExpressibleByArrayLiteral.swift */,
-				50A20BD6279942B600E5E285 /* OrderedSet+SubSequence.swift */,
-				50A20BD7279942B600E5E285 /* OrderedSet+Partial MutableCollection.swift */,
-				50A20BD8279942B600E5E285 /* OrderedSet+Testing.swift */,
-				50A20BD9279942B600E5E285 /* OrderedSet+CustomReflectable.swift */,
-				50A20BDA279942B600E5E285 /* OrderedSet+ReserveCapacity.swift */,
-				50A20BDB279942B600E5E285 /* OrderedSet+Partial RangeReplaceableCollection.swift */,
-				50A20BDC279942B600E5E285 /* OrderedSet+Partial SetAlgebra+Basics.swift */,
-				50A20BDD279942B600E5E285 /* OrderedSet+Partial SetAlgebra+Predicates.swift */,
-				50A20BDE279942B600E5E285 /* OrderedSet+Partial SetAlgebra+Operations.swift */,
-			);
-			path = OrderedSet;
-			sourceTree = "<group>";
-		};
-		50A20BDF279942B600E5E285 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				50A20BE0279942B600E5E285 /* _UnsafeBitset.swift */,
-				50A20BE1279942B600E5E285 /* RandomAccessCollection+Offsets.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		50A20BE2279942B600E5E285 /* HashTable */ = {
-			isa = PBXGroup;
-			children = (
-				50A20BE3279942B600E5E285 /* _HashTable+UnsafeHandle.swift */,
-				50A20BE4279942B600E5E285 /* _HashTable+Bucket.swift */,
-				50A20BE5279942B600E5E285 /* _HashTable.swift */,
-				50A20BE6279942B600E5E285 /* _HashTable+Constants.swift */,
-				50A20BE7279942B600E5E285 /* _Hashtable+Header.swift */,
-				50A20BE8279942B600E5E285 /* _HashTable+Testing.swift */,
-				50A20BE9279942B600E5E285 /* _HashTable+CustomStringConvertible.swift */,
-				50A20BEA279942B600E5E285 /* _HashTable+BucketIterator.swift */,
-			);
-			path = HashTable;
-			sourceTree = "<group>";
-		};
-		50A20C1E2799436200E5E285 /* ThirdParty */ = {
-			isa = PBXGroup;
-			children = (
-				50A20C1F2799437300E5E285 /* Note.md */,
-				50A20BB3279942B600E5E285 /* OrderedCollections */,
-			);
-			path = ThirdParty;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -556,61 +356,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50A20C15279942B600E5E285 /* RandomAccessCollection+Offsets.swift in Sources */,
-				50A20BF5279942B600E5E285 /* OrderedDictionary+Elements.swift in Sources */,
-				50A20C0E279942B600E5E285 /* OrderedSet+CustomReflectable.swift in Sources */,
-				50A20C1D279942B600E5E285 /* _HashTable+BucketIterator.swift in Sources */,
-				50A20C10279942B600E5E285 /* OrderedSet+Partial RangeReplaceableCollection.swift in Sources */,
-				50A20BF0279942B600E5E285 /* OrderedDictionary+Deprecations.swift in Sources */,
-				50A20BEE279942B600E5E285 /* OrderedDictionary+Elements+SubSequence.swift in Sources */,
-				50A20C07279942B600E5E285 /* OrderedSet+Initializers.swift in Sources */,
-				50A20C0C279942B600E5E285 /* OrderedSet+Partial MutableCollection.swift in Sources */,
-				50A20BF9279942B600E5E285 /* OrderedDictionary+CustomStringConvertible.swift in Sources */,
-				50A20C14279942B600E5E285 /* _UnsafeBitset.swift in Sources */,
-				50A20C0D279942B600E5E285 /* OrderedSet+Testing.swift in Sources */,
-				50A20BF2279942B600E5E285 /* OrderedDictionary+CustomReflectable.swift in Sources */,
-				50A20C0A279942B600E5E285 /* OrderedSet+ExpressibleByArrayLiteral.swift in Sources */,
-				50A20C06279942B600E5E285 /* OrderedSet+Equatable.swift in Sources */,
-				50A20BFB279942B600E5E285 /* OrderedDictionary+Partial MutableCollection.swift in Sources */,
-				50A20BFF279942B600E5E285 /* OrderedSet+UnstableInternals.swift in Sources */,
-				50A20C11279942B600E5E285 /* OrderedSet+Partial SetAlgebra+Basics.swift in Sources */,
-				50A20BEF279942B600E5E285 /* OrderedDictionary+Hashable.swift in Sources */,
 				5023BD0627946F64002AD5E0 /* AccordionTable.swift in Sources */,
-				50A20C00279942B600E5E285 /* OrderedSet+Invariants.swift in Sources */,
-				50A20BFA279942B600E5E285 /* OrderedDictionary+Values.swift in Sources */,
-				50A20C1B279942B600E5E285 /* _HashTable+Testing.swift in Sources */,
-				50A20BFC279942B600E5E285 /* OrderedDictionary.swift in Sources */,
-				50A20C0F279942B600E5E285 /* OrderedSet+ReserveCapacity.swift in Sources */,
-				50A20C09279942B600E5E285 /* OrderedSet+UnorderedView.swift in Sources */,
-				50A20BF4279942B600E5E285 /* OrderedDictionary+Partial RangeReplaceableCollection.swift in Sources */,
-				50A20C19279942B600E5E285 /* _HashTable+Constants.swift in Sources */,
 				5023BD0827946F64002AD5E0 /* TableStateManager.swift in Sources */,
-				50A20BF3279942B600E5E285 /* OrderedDictionary+Sequence.swift in Sources */,
-				50A20BEC279942B600E5E285 /* OrderedDictionary+Equatable.swift in Sources */,
-				50A20BFE279942B600E5E285 /* OrderedSet+Diffing.swift in Sources */,
-				50A20BF1279942B600E5E285 /* OrderedDictionary+Initializers.swift in Sources */,
-				50A20C0B279942B600E5E285 /* OrderedSet+SubSequence.swift in Sources */,
-				50A20BF7279942B600E5E285 /* OrderedDictionary+Codable.swift in Sources */,
-				50A20C1A279942B600E5E285 /* _Hashtable+Header.swift in Sources */,
-				50A20BF6279942B600E5E285 /* OrderedDictionary+CustomDebugStringConvertible.swift in Sources */,
 				5023BD0727946F64002AD5E0 /* TableRowStateManager.swift in Sources */,
-				50A20BF8279942B600E5E285 /* OrderedDictionary+Invariants.swift in Sources */,
-				50A20C17279942B600E5E285 /* _HashTable+Bucket.swift in Sources */,
-				50A20C02279942B600E5E285 /* OrderedSet+CustomDebugStringConvertible.swift in Sources */,
 				5023BD0A27946F64002AD5E0 /* TableSectionStateManager.swift in Sources */,
-				50A20C12279942B600E5E285 /* OrderedSet+Partial SetAlgebra+Predicates.swift in Sources */,
-				50A20C08279942B600E5E285 /* OrderedSet.swift in Sources */,
 				5023BD0927946F64002AD5E0 /* HeaderView.swift in Sources */,
-				50A20C05279942B600E5E285 /* OrderedSet+Codable.swift in Sources */,
-				50A20BFD279942B600E5E285 /* OrderedSet+RandomAccessCollection.swift in Sources */,
-				50A20C13279942B600E5E285 /* OrderedSet+Partial SetAlgebra+Operations.swift in Sources */,
-				50A20C03279942B600E5E285 /* OrderedSet+CustomStringConvertible.swift in Sources */,
-				50A20C1C279942B600E5E285 /* _HashTable+CustomStringConvertible.swift in Sources */,
-				50A20C16279942B600E5E285 /* _HashTable+UnsafeHandle.swift in Sources */,
-				50A20BED279942B600E5E285 /* OrderedDictionary+ExpressibleByDictionaryLiteral.swift in Sources */,
-				50A20C04279942B600E5E285 /* OrderedSet+Insertions.swift in Sources */,
-				50A20C18279942B600E5E285 /* _HashTable.swift in Sources */,
-				50A20C01279942B600E5E285 /* OrderedSet+Hashable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

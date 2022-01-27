@@ -1,7 +1,7 @@
 import UIKit
 import AccordionTable
 
-class TypicalTableViewDelegate<Section: Hashable, Row: Hashable>: NSObject, UITableViewDelegate {
+class TypicalTableViewDelegate<Section: TableSection, Row: TableRow>: NSObject, UITableViewDelegate {
     
     let tableManager: AccordionTable<Section, Row>
     

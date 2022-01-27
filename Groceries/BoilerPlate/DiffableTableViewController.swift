@@ -1,7 +1,7 @@
 import UIKit
 import AccordionTable
 
-class DiffableTableViewController<TableView: UITableView, Section: Hashable, Row: Hashable>: UIViewController {
+class DiffableTableViewController<TableView: UITableView, Section: TableSection, Row: TableRow>: UIViewController {
     
     typealias CellProvider = (UITableView, IndexPath, Row) -> UITableViewCell
     typealias HeaderProvider = (UITableView, Int, Section) -> HeaderView
@@ -66,7 +66,7 @@ class DiffableTableViewController<TableView: UITableView, Section: Hashable, Row
         }
     }
 
-    func update(with data: OrderedDictionary<Section, [Row]>, animated: Bool = true, completion: (() -> Void)? = nil) {
+    func update(with data: Dictionary<Section, [Row]>, animated: Bool = true, completion: (() -> Void)? = nil) {
         diffableTableManager.update(with: data, animated: animated, completion: completion)
     }
 }

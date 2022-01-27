@@ -5,10 +5,13 @@ public enum SectionVisibility {
     case expanded
 }
 
+public typealias TableSection = Hashable & Comparable
+public typealias TableRow = Hashable & Comparable
+
 /// A wrapper for a diffable dataSource which facilitates collapsible table view sections. Responsible for coordinating cell selection, in
 /// single-selection mode only.
 /// - Important: The property `allowsMultipleSelection` on `UITableView` must be set to false.
-public final class AccordionTable<Section: Hashable, Row: Hashable> {
+public final class AccordionTable<Section: TableSection, Row: TableRow> {
 
     public typealias DiffableDataSource = UITableViewDiffableDataSource<Section, Row>
     public typealias HeaderProvider = (UITableView, Int, Section) -> HeaderView
@@ -17,7 +20,7 @@ public final class AccordionTable<Section: Hashable, Row: Hashable> {
     private let headerProvider: HeaderProvider
     private let animationDuration: CGFloat = 0.2
     
-    private var data = OrderedDictionary<Section, [Row]>()
+    private var data = Dictionary<Section, [Row]>()
     
     private let stateManager = TableStateManager<Section, Row>()
     
@@ -60,7 +63,7 @@ public final class AccordionTable<Section: Hashable, Row: Hashable> {
     ///   - data: A snapshot of data representing the entire content of the table.
     ///   - animated: An indication to animate the table view transition.
     ///   - completion: The block that is executed once the table view animations have completed.
-    public func update(with data: OrderedDictionary<Section, [Row]>, animated: Bool = true, completion: (() -> Void)? = nil) {
+    public func update(with data: Dictionary<Section, [Row]>, animated: Bool = true, completion: (() -> Void)? = nil) {
         self.data = data
         stateManager.clean()
         applySnapshot(animated, completion: completion)
@@ -128,7 +131,7 @@ public final class AccordionTable<Section: Hashable, Row: Hashable> {
 
     private func makeSnapshot() -> NSDiffableDataSourceSnapshot<Section, Row> {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Row>()
-        snapshot.appendSections(data.keys.elements)
+        snapshot.appendSections(data.keys.sorted())
         for (section, rows) in data {
             switch stateManager.visibility(of: section) {
             case .collapsed:
@@ -144,7 +147,7 @@ public final class AccordionTable<Section: Hashable, Row: Hashable> {
         if #available(iOS 15.0, *) {
             return dataSource.sectionIdentifier(for: sectionIndex)
         }
-        return data.keys[sectionIndex]
+        return data.keys.sorted()[sectionIndex]
     }
 }
 
