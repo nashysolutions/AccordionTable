@@ -14,7 +14,7 @@ Introduces a breaking change.
 The [OrderedDictionary](https://github.com/apple/swift-collections/tree/main/Sources/OrderedCollections/OrderedDictionary) source code has been removed. The interface for maping data has changed to the following.
 
 ```swift
-public func update(with data: [Section, [Row]], animated: Bool = true, completion: (() -> Void)? = nil)
+public func update(with data: [Section: [Row]], animated: Bool = true, completion: (() -> Void)? = nil)
 ```
 
 ## [1.0.0] - 2022-01-20
