@@ -92,26 +92,16 @@ The following steps are for a typical table view implementation.
 
 ### Map your data
 
-The source for [Ordered Dictionary](https://github.com/apple/swift-collections/tree/main/Sources/OrderedCollections/OrderedDictionary) has been embedded within the project. See [Note](https://github.com/nashysolutions/AccordionTable/blob/main/AccordionTable/ThirdParty/Note.md) for reasoning.
-
 ```swift
-let data = OrderedDictionary<Food, [Item]>()
+let data = [Food: [Item]]()
 ```
-    
-## Side Note
-    
-Consider avoiding any user interface state management in your model structures (and hashable implementation), such as `isHighlighted`, as this will be destroyed per snapshot (use a backing store instead, such as a `Set` or `key/value` collection).
-
-If your user interface is reloading more rows/sections than it should, it is likely the hashable implementation to blame. It seems each row must be unique within the entire dataset (not just within the section it belongs). Use GUID's on your dataset to achieve this. Alternatively, at the row level, make a reference to the section in which that row belongs (be careful of retain cycle when using classes) and use that in the hashable implementation of the row.
-
-> If you need to use `reloadItems(_ identifiers: [ItemIdentifierType])` then you will need to use class's for your model.  
 
 ## Usage 
 
 To reload the data, call the following on your instance of `AccordionTable`.
 
 ```swift
-func update(with data: OrderedDictionary<Food, [Item]>, animated: true)
+func update(with data: [Food, [Item]], animated: true)
 ```
 
 > On initial load, pass `animated: false`.
@@ -129,3 +119,11 @@ To programmatically deselect a row.
 diffableTableManager.saveDeselectedStateForRow(at: indexPath)
 tableView.deselectRow(at: indexPath, animated: animated)
 ```
+
+## Side Note
+    
+Consider avoiding any user interface state management in your model structures (and hashable implementation), such as `isHighlighted`, as this will be destroyed per snapshot (use a backing store instead, such as a `Set` or `key/value` collection - see [demo](https://github.com/nashysolutions/MeltingList) app).
+
+If your user interface is reloading more rows/sections than it should, it is likely the hashable implementation to blame. It seems each row must be unique within the entire dataset (not just within the section it belongs). Use GUID's on your dataset to achieve this. Alternatively, at the row level, make a reference to the section in which that row belongs (be careful of retain cycle when using classes) and use that in the hashable implementation of the row.
+
+> If you need to use `reloadItems(_ identifiers: [ItemIdentifierType])` then you will need to use class's for your model.
