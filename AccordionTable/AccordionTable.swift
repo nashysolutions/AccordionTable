@@ -20,7 +20,7 @@ public final class AccordionTable<Section: TableSection, Row: TableRow> {
     private let headerProvider: HeaderProvider
     private let animationDuration: CGFloat = 0.2
     
-    private var data = Dictionary<Section, [Row]>()
+    private var data = [Section: [Row]]()
     
     private let stateManager = TableStateManager<Section, Row>()
     
@@ -63,7 +63,7 @@ public final class AccordionTable<Section: TableSection, Row: TableRow> {
     ///   - data: A snapshot of data representing the entire content of the table.
     ///   - animated: An indication to animate the table view transition.
     ///   - completion: The block that is executed once the table view animations have completed.
-    public func update(with data: Dictionary<Section, [Row]>, animated: Bool = true, completion: (() -> Void)? = nil) {
+    public func update(with data: [Section: [Row]], animated: Bool = true, completion: (() -> Void)? = nil) {
         self.data = data
         stateManager.clean()
         applySnapshot(animated, completion: completion)

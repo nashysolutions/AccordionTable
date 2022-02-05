@@ -21,4 +21,4 @@ struct Item: Hashable, Comparable {
     let title: String
 }
 
-typealias Collection = Dictionary<Food, [Item]>
+typealias Collection = [Food, [Item]]

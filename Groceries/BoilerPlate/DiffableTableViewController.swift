@@ -66,7 +66,7 @@ class DiffableTableViewController<TableView: UITableView, Section: TableSection,
         }
     }
 
-    func update(with data: Dictionary<Section, [Row]>, animated: Bool = true, completion: (() -> Void)? = nil) {
+    func update(with data: [Section, [Row]], animated: Bool = true, completion: (() -> Void)? = nil) {
         diffableTableManager.update(with: data, animated: animated, completion: completion)
     }
 }
