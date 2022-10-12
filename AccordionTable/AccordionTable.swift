@@ -166,6 +166,10 @@ extension AccordionTable: HeaderDataSource {
         }
         return stateManager.visibility(of: section)
     }
+    
+    public func headerViewShouldDetectTouch(_ headerView: HeaderView) -> Bool {
+        enabledFeatures.contains(.collapsible)
+    }
 }
 
 extension AccordionTable: HeaderDelegate {

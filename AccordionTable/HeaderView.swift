@@ -53,6 +53,9 @@ open class HeaderView: UITableViewHeaderFooterView {
     
     override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        delegate?.headerView(self, didDetectTouch: section)
+        let condition = dataSource?.headerViewShouldDetectTouch(self) ?? false
+        if condition {
+            delegate?.headerView(self, didDetectTouch: section)
+        }
     }
 }
