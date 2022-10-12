@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Addition
 
-- [Issue 2])(https://github.com/nashysolutions/AccordionTable/issues/2) Toggle collapsible sections feature on or off.
+- [Issue 2](https://github.com/nashysolutions/AccordionTable/issues/2) Toggle collapsible sections feature on or off.
 
 ## [2.0.0] - 2022-02-02
 
