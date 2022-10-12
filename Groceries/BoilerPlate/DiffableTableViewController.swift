@@ -60,10 +60,10 @@ class DiffableTableViewController<TableView: UITableView, Section: TableSection,
         tableView.selectRow(at: indexPath, animated: animated, scrollPosition: scrollPosition)
     }
     
-    func deselectSelectedRow() {
+    func deselectSelectedRow(animated: Bool = true) {
         if let indexPath = indexPathForSelectedRow {
             diffableTableManager.saveDeselectedStateForRow(at: indexPath)
-            tableView.deselectRow(at: indexPath, animated: true)
+            tableView.deselectRow(at: indexPath, animated: animated)
         }
     }
 
