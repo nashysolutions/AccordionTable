@@ -1,4 +1,5 @@
 import UIKit
+import AccordionTable
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func makeRootViewController() -> UIViewController {
         
-        let controller = FoodsViewController(tableView: .init(frame: .zero, style: .plain)) { tableView, indexPath, item in
+        let isUITest = CommandLine.arguments.contains("--ui-testing")
+        let isDisabled = CommandLine.arguments.contains("--collapsibleFeature-disabled")
+        var enabledFeatures: [TableFeature] = [.collapsible]
+        if isUITest && isDisabled {
+            enabledFeatures = []
+        }
+        
+        let controller = FoodsViewController(tableView: .init(frame: .zero, style: .plain), enabledFeatures: enabledFeatures) { tableView, indexPath, item in
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! Cell
             cell.update(with: item)
             return cell
@@ -27,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return view
         }
         
-        if CommandLine.arguments.contains("--ui-testing") {
+        if isUITest {
             controller.data = try! DataLoader.originalData()
         }
         

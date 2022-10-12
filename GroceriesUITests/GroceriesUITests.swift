@@ -97,6 +97,27 @@ final class GroceriesUITests: XCTestCase {
         let exists = cabbageCell.waitForExistence(timeout: animationDelay)
         XCTAssertTrue(exists)
     }
+    
+    func testHeaderTapDisabled() {
+        
+        // given
+        app.launchArguments.append("--collapsibleFeature-disabled")
+        
+        // when
+        app.launch()
+        
+        // given
+        let cabbageCell = cell(.cabbage)
+        let header = header(.vegetables)
+        
+        // when
+        header.tap()
+        
+        // then - the section should not have collapsed and the
+        // cell should still exist
+        let exists = cabbageCell.waitForExistence(timeout: animationDelay)
+        XCTAssertTrue(exists)
+    }
 
     func testSelectionMemorised() {
 
