@@ -48,6 +48,8 @@ The following steps are for a typical table view implementation.
     ```
 </details>
 
+> The `AccordionTable` type also has an `enabledFeatures` parameter.
+
 ### Prepare a table view delegate.
 
 <details>
