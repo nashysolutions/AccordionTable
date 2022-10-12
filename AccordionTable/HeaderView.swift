@@ -5,7 +5,15 @@ public protocol HeaderDelegate: AnyObject {
 }
 
 public protocol HeaderDataSource: AnyObject {
+    func headerViewShouldDetectTouch(_ headerView: HeaderView) -> Bool
     func headerView(_ headerView: HeaderView, rowVisibility section: Any?) -> SectionVisibility
+}
+
+public extension HeaderDataSource {
+    
+    func headerViewShouldDetectTouch(_ headerView: HeaderView) -> Bool {
+        return true
+    }
 }
 
 open class HeaderView: UITableViewHeaderFooterView {
