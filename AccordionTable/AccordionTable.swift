@@ -5,6 +5,10 @@ public enum SectionVisibility {
     case expanded
 }
 
+public enum TableFeature {
+    case collapsible
+}
+
 public typealias TableSection = Hashable & Comparable
 public typealias TableRow = Hashable & Comparable
 
@@ -24,9 +28,12 @@ public final class AccordionTable<Section: TableSection, Row: TableRow> {
     
     private let stateManager = TableStateManager<Section, Row>()
     
-    public init(dataSource: DiffableDataSource, headerProvider: @escaping HeaderProvider) {
+    private let enabledFeatures: [TableFeature]
+    
+    public init(dataSource: DiffableDataSource, enabledFeatures: [TableFeature] = [.collapsible], headerProvider: @escaping HeaderProvider) {
         
         self.dataSource = dataSource
+        self.enabledFeatures = enabledFeatures
         self.headerProvider = headerProvider
                 
         self.stateManager.rows = { [unowned self] section in
@@ -158,6 +165,10 @@ extension AccordionTable: HeaderDataSource {
             return .expanded
         }
         return stateManager.visibility(of: section)
+    }
+    
+    public func headerViewShouldDetectTouch(_ headerView: HeaderView) -> Bool {
+        enabledFeatures.contains(.collapsible)
     }
 }
 

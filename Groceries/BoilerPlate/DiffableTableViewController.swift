@@ -14,7 +14,7 @@ class DiffableTableViewController<TableView: UITableView, Section: TableSection,
     
     private let tableDataSource: UITableViewDiffableDataSource<Section, Row>
     
-    init(tableView: TableView, cellProvider: @escaping CellProvider, headerProvider: @escaping HeaderProvider) {
+    init(tableView: TableView, enabledFeatures: [TableFeature] = [.collapsible], cellProvider: @escaping CellProvider, headerProvider: @escaping HeaderProvider) {
         
         let tableDataSource = UITableViewDiffableDataSource<Section, Row>(
             tableView: tableView,
@@ -23,6 +23,7 @@ class DiffableTableViewController<TableView: UITableView, Section: TableSection,
         
         let diffableTableManager = AccordionTable<Section, Row>(
             dataSource: tableDataSource,
+            enabledFeatures: enabledFeatures,
             headerProvider: headerProvider
         )
         
@@ -59,10 +60,10 @@ class DiffableTableViewController<TableView: UITableView, Section: TableSection,
         tableView.selectRow(at: indexPath, animated: animated, scrollPosition: scrollPosition)
     }
     
-    func deselectSelectedRow() {
+    func deselectSelectedRow(animated: Bool = true) {
         if let indexPath = indexPathForSelectedRow {
             diffableTableManager.saveDeselectedStateForRow(at: indexPath)
-            tableView.deselectRow(at: indexPath, animated: true)
+            tableView.deselectRow(at: indexPath, animated: animated)
         }
     }
 

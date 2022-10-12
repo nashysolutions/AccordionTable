@@ -5,7 +5,15 @@ public protocol HeaderDelegate: AnyObject {
 }
 
 public protocol HeaderDataSource: AnyObject {
+    func headerViewShouldDetectTouch(_ headerView: HeaderView) -> Bool
     func headerView(_ headerView: HeaderView, rowVisibility section: Any?) -> SectionVisibility
+}
+
+public extension HeaderDataSource {
+    
+    func headerViewShouldDetectTouch(_ headerView: HeaderView) -> Bool {
+        return true
+    }
 }
 
 open class HeaderView: UITableViewHeaderFooterView {
@@ -45,6 +53,9 @@ open class HeaderView: UITableViewHeaderFooterView {
     
     override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        delegate?.headerView(self, didDetectTouch: section)
+        let condition = dataSource?.headerViewShouldDetectTouch(self) ?? false
+        if condition {
+            delegate?.headerView(self, didDetectTouch: section)
+        }
     }
 }
